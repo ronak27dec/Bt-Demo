@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		643EF69D2B6D7882003778AF /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643EF69C2B6D7882003778AF /* UserError.swift */; };
+		643EF6A52B6D8108003778AF /* Bt_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643EF6A42B6D8108003778AF /* Bt_DemoTests.swift */; };
 		6466CB142B6C2C0F00692ADF /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6466CB132B6C2C0F00692ADF /* URLImage */; };
 		6466CB162B6C2C0F00692ADF /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 6466CB152B6C2C0F00692ADF /* URLImageStore */; };
 		6466CB192B6C3CF400692ADF /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CB182B6C3CF400692ADF /* UsersView.swift */; };
@@ -22,8 +23,20 @@
 		64BB3C182B6A0C1B00B736A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64BB3C172B6A0C1B00B736A1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		643EF6A62B6D8108003778AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64BB3C052B6A0C1A00B736A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64BB3C0C2B6A0C1A00B736A1;
+			remoteInfo = "Bt-Demo";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		643EF69C2B6D7882003778AF /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
+		643EF6A22B6D8108003778AF /* Bt-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bt-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		643EF6A42B6D8108003778AF /* Bt_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bt_DemoTests.swift; sourceTree = "<group>"; };
 		6466CB182B6C3CF400692ADF /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		6466CB1A2B6C3D0300692ADF /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		6466CB1C2B6C3D0F00692ADF /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
@@ -38,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		643EF69F2B6D8108003778AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		64BB3C0A2B6A0C1A00B736A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		643EF6A32B6D8108003778AF /* Bt-DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				643EF6A42B6D8108003778AF /* Bt_DemoTests.swift */,
+			);
+			path = "Bt-DemoTests";
+			sourceTree = "<group>";
+		};
 		6466CB172B6C3CC800692ADF /* Users */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				64BB3C0F2B6A0C1A00B736A1 /* Bt-Demo */,
+				643EF6A32B6D8108003778AF /* Bt-DemoTests */,
 				64BB3C0E2B6A0C1A00B736A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				64BB3C0D2B6A0C1A00B736A1 /* Bt-Demo.app */,
+				643EF6A22B6D8108003778AF /* Bt-DemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +149,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		643EF6A12B6D8108003778AF /* Bt-DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 643EF6A82B6D8108003778AF /* Build configuration list for PBXNativeTarget "Bt-DemoTests" */;
+			buildPhases = (
+				643EF69E2B6D8108003778AF /* Sources */,
+				643EF69F2B6D8108003778AF /* Frameworks */,
+				643EF6A02B6D8108003778AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				643EF6A72B6D8108003778AF /* PBXTargetDependency */,
+			);
+			name = "Bt-DemoTests";
+			productName = "Bt-DemoTests";
+			productReference = 643EF6A22B6D8108003778AF /* Bt-DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		64BB3C0C2B6A0C1A00B736A1 /* Bt-Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64BB3C1B2B6A0C1B00B736A1 /* Build configuration list for PBXNativeTarget "Bt-Demo" */;
@@ -150,6 +198,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					643EF6A12B6D8108003778AF = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 64BB3C0C2B6A0C1A00B736A1;
+					};
 					64BB3C0C2B6A0C1A00B736A1 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -172,11 +224,19 @@
 			projectRoot = "";
 			targets = (
 				64BB3C0C2B6A0C1A00B736A1 /* Bt-Demo */,
+				643EF6A12B6D8108003778AF /* Bt-DemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		643EF6A02B6D8108003778AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		64BB3C0B2B6A0C1A00B736A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,6 +249,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		643EF69E2B6D8108003778AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				643EF6A52B6D8108003778AF /* Bt_DemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		64BB3C092B6A0C1A00B736A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,7 +275,49 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		643EF6A72B6D8108003778AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64BB3C0C2B6A0C1A00B736A1 /* Bt-Demo */;
+			targetProxy = 643EF6A62B6D8108003778AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		643EF6A92B6D8108003778AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ronak.Bt-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bt-Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bt-Demo";
+			};
+			name = Debug;
+		};
+		643EF6AA2B6D8108003778AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ronak.Bt-DemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bt-Demo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bt-Demo";
+			};
+			name = Release;
+		};
 		64BB3C192B6A0C1B00B736A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -386,6 +496,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		643EF6A82B6D8108003778AF /* Build configuration list for PBXNativeTarget "Bt-DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643EF6A92B6D8108003778AF /* Debug */,
+				643EF6AA2B6D8108003778AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		64BB3C082B6A0C1A00B736A1 /* Build configuration list for PBXProject "Bt-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
