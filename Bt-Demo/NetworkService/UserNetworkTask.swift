@@ -8,9 +8,11 @@
 import Foundation
 
 class UserNetworkTask {
-    func fetch(url: URL, onCompletion: @escaping (Result<Users, UserError>) -> (Void)) {
+    
+    func fetch(session: URLSession = URLSession(configuration: .default),
+               url: URL,
+               onCompletion: @escaping (Result<Users, UserError>) -> (Void)) {
         let req = URLRequest(url: url)
-        let session = URLSession(configuration: .default)
         session.dataTask(with: req) { data, resp, err in
             guard let unwrappedData = data else {
                 onCompletion(.failure(.noData))
