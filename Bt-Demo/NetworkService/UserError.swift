@@ -8,6 +8,7 @@
 import Foundation
 
 enum UserError: Error {
+    case genericError
     case urlNotValid
     case parsingFailed
     case noData

@@ -8,26 +8,37 @@
 import Foundation
 
 class UsersModel {
-    private let service: NetworkService
+    private let task: UserNetworkTask
     private var tempUser: [User] = []
     private var maxPages: UInt = 1
 
-    init(service: NetworkService = NetworkService()) {
-        self.service = service
+    init(task: UserNetworkTask = UserNetworkTask()) {
+        self.task = task
     }
 
-    func fetch(pageCount: UInt, onCompletion: @escaping ([User]?) -> (Void)) {
-        guard pageCount <= maxPages else { return }
-        guard let url = generateURL(pageCount: pageCount) else { return }
-        service.fetch(url: url) { [weak self] user in
-            self?.maxPages = user.totalPages
-            self?.tempUser.append(contentsOf: user.data)
-            onCompletion(self?.tempUser)
+    func fetch(page: UInt, onCompletion: @escaping (Result<[User]?, UserError>) -> (Void)) {
+        guard page <= maxPages else {
+            onCompletion(.failure(.maxPageCountReached))
+            return
+        }
+        guard let url = generateURL(page: page) else {
+            onCompletion(.failure(.urlNotValid))
+            return
+        }
+        task.fetch(url: url) { [weak self] result in
+            switch result {
+            case .success(let user):
+                self?.maxPages = user.totalPages
+                self?.tempUser.append(contentsOf: user.data)
+                onCompletion(.success(self?.tempUser))
+            case .failure(let err):
+                onCompletion(.failure(err))
+            }
         }
     }
     
-    private func generateURL(pageCount: UInt) -> URL? {
-        let urlString = "https://reqres.in/api/users?page=\(pageCount)"
+    private func generateURL(page: UInt) -> URL? {
+        let urlString = "https://reqres.in/api/users?page=\(page)"
         guard let url = URL(string: urlString) else { return nil }
         return url
     }

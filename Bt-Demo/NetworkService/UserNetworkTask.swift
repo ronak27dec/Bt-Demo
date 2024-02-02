@@ -8,18 +8,22 @@
 import Foundation
 
 class UserNetworkTask {
-    func fetch(url: URL, onCompletion: @escaping (Users) -> (Void)) {
+    func fetch(url: URL, onCompletion: @escaping (Result<Users, UserError>) -> (Void)) {
         let req = URLRequest(url: url)
         let session = URLSession(configuration: .default)
         session.dataTask(with: req) { data, resp, err in
-            guard let unwrappedData = data else { return }
+            guard let unwrappedData = data else {
+                onCompletion(.failure(.noData))
+                return
+            }
             do {
                 let decoder = JSONDecoder()
                 let unwrapedModel = try decoder.decode(Users.self, from: unwrappedData)
                 print(unwrapedModel)
-                onCompletion(unwrapedModel)
+                onCompletion(.success(unwrapedModel))
             } catch {
-                print("parser failure \(error)")
+                assertionFailure("Parsing failed: \(error)")
+                onCompletion(.failure(.parsingFailed))
             }
         }.resume()
     }

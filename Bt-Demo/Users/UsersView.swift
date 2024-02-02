@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UsersView: View {
     @StateObject var vm = UsersViewModel()
-    @State private var pageCount: UInt = 1
+    @State private var page: UInt = 1
     
     private let loadMoreButtonText = "Load More"
     private let usersViewNavigationTitle = "Users"
@@ -19,11 +19,11 @@ struct UsersView: View {
             VStack {
                 loadUsersList()
                     .listStyle(.plain)
-                    .onAppear { vm.fetchUsers(pageCount: pageCount) }
+                    .onAppear { vm.fetchUsers(page: page) }
                 
                 Button(loadMoreButtonText) {
-                    pageCount += 1
-                    vm.fetchUsers(pageCount: pageCount)
+                    page += 1
+                    vm.fetchUsers(page: page)
                 }
             }
             .navigationTitle(usersViewNavigationTitle)

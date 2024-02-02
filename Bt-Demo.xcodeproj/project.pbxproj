@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643EF69D2B6D7882003778AF /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643EF69C2B6D7882003778AF /* UserError.swift */; };
 		6466CB142B6C2C0F00692ADF /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6466CB132B6C2C0F00692ADF /* URLImage */; };
 		6466CB162B6C2C0F00692ADF /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 6466CB152B6C2C0F00692ADF /* URLImageStore */; };
 		6466CB192B6C3CF400692ADF /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CB182B6C3CF400692ADF /* UsersView.swift */; };
 		6466CB1B2B6C3D0300692ADF /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CB1A2B6C3D0300692ADF /* UsersViewModel.swift */; };
 		6466CB1D2B6C3D0F00692ADF /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CB1C2B6C3D0F00692ADF /* UsersModel.swift */; };
 		6466CB1F2B6C3DFF00692ADF /* UsersListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CB1E2B6C3DFF00692ADF /* UsersListRowItemView.swift */; };
-		6466CB222B6C3FC600692ADF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CB212B6C3FC600692ADF /* NetworkService.swift */; };
+		6466CB222B6C3FC600692ADF /* UserNetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CB212B6C3FC600692ADF /* UserNetworkTask.swift */; };
 		6466CB252B6C3FF200692ADF /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CB242B6C3FF200692ADF /* Users.swift */; };
 		6466CB272B6C3FF900692ADF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6466CB262B6C3FF900692ADF /* User.swift */; };
 		64BB3C112B6A0C1A00B736A1 /* Bt_DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB3C102B6A0C1A00B736A1 /* Bt_DemoApp.swift */; };
@@ -22,11 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		643EF69C2B6D7882003778AF /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		6466CB182B6C3CF400692ADF /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		6466CB1A2B6C3D0300692ADF /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 		6466CB1C2B6C3D0F00692ADF /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
 		6466CB1E2B6C3DFF00692ADF /* UsersListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListRowItemView.swift; sourceTree = "<group>"; };
-		6466CB212B6C3FC600692ADF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6466CB212B6C3FC600692ADF /* UserNetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkTask.swift; sourceTree = "<group>"; };
 		6466CB242B6C3FF200692ADF /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		6466CB262B6C3FF900692ADF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		64BB3C0D2B6A0C1A00B736A1 /* Bt-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bt-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +65,8 @@
 		6466CB202B6C3F9700692ADF /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
-				6466CB212B6C3FC600692ADF /* NetworkService.swift */,
+				6466CB212B6C3FC600692ADF /* UserNetworkTask.swift */,
+				643EF69C2B6D7882003778AF /* UserError.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -196,8 +199,9 @@
 				6466CB1F2B6C3DFF00692ADF /* UsersListRowItemView.swift in Sources */,
 				6466CB272B6C3FF900692ADF /* User.swift in Sources */,
 				6466CB1D2B6C3D0F00692ADF /* UsersModel.swift in Sources */,
+				643EF69D2B6D7882003778AF /* UserError.swift in Sources */,
 				6466CB192B6C3CF400692ADF /* UsersView.swift in Sources */,
-				6466CB222B6C3FC600692ADF /* NetworkService.swift in Sources */,
+				6466CB222B6C3FC600692ADF /* UserNetworkTask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
